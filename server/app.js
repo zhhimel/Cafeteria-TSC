@@ -7,7 +7,7 @@ app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 app.use(cors(
     {
-        origin:["https://cafeteria-tsc-7sxu.vercel.app/"],
+        origin:["https://cafeteria-tsc.vercel.app/"],
         methods:["POST","GET","UPDATE","DELETE"],
         credentials: true
     }
