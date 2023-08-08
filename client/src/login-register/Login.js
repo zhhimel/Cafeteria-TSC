@@ -13,6 +13,7 @@ const Login = () => {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   useEffect (()=>{
+    
     if(flag&&email==='zh.rahman.2002@gmail.com') {
       localStorage.setItem("adminloggedIn","true");
       setUserEmail(email);
@@ -36,6 +37,10 @@ const Login = () => {
     e.preventDefault();
 
     try {
+      if(email===""||password===""){
+        alert("Fill all the fields");
+        return ;
+      }
       await axios.post("http://localhost:8000/login", {
         email, password
       })

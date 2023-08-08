@@ -73,8 +73,8 @@ const Cart = () => {
           </div>
           {
             !(userflag || adminflag) && (
-              <div style={{ position: "fixed", bottom: "100px", border: "1px solid black" }}>
-                <h1>You must login to give order.</h1>
+              <div style={{ position: "fixed", bottom: "100px", border: "1px dotted black" }}>
+                <h3>You must login to give order.</h3>
               </div>
             )
           }
@@ -85,7 +85,7 @@ const Cart = () => {
                 <label>Phone: <input className='ms-3' type='text' value={phone} onChange={(e)=>{setPhone(e.target.value)}}></input></label>
               </div>
               <div className='mt-2'>
-                <label>Address:<input className='ms-2' type='text' value={address} onChange={(e)=>{setAddress(e.target.value)}}></input></label>
+                <label>Address:<input className='ms-2' type='text' value="Must be in CUET" onChange={(e)=>{setAddress(e.target.value)}}></input></label>
               </div>
             </form>
             <div className='mt-2'>

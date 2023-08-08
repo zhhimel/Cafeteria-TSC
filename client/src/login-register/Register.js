@@ -11,7 +11,10 @@ const Register = () => {
     e.preventDefault();
 
     try {
-
+      if(email===""||password===""){
+        alert("Fill all the fields");
+        return ;
+      }
       await axios.post("http://localhost:8000/signup", {
         email, password
       })
