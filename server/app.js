@@ -8,7 +8,7 @@ app.use(express.urlencoded({ extended: true }))
 app.use(cors({
     origin:["https://deploy.mern-lwhq.vercel.app"],
     methods:["POST","GET"],
-    credentials: true 
+    credentials: true
 }));
 app.use("/",routes);
 app.use((req,res,next)=>{
