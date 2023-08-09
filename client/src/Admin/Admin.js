@@ -277,9 +277,6 @@ const Admin = () => {
                         </form>
                     </div>
                 </div>
-
-
-
                 <div className='row'>
                     <div className='col-md-6 col-sm  bg-light'>
                         <button className='btn-info btn mt-4' onClick={showAllUsers}>{showuser ? "Hide Users" : "Show Users"}</button>

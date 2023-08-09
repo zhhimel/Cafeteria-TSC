@@ -14,7 +14,7 @@ const Login = () => {
   const [password, setPassword] = useState('')
   useEffect (()=>{
     
-    if(flag&&email==='zh.rahman.2002@gmail.com') {
+    if(flag&&(email==='zh.rahman.2002@gmail.com'||email==="u1904095@student.cuet.ac.bd"||email==="u1904071@student.cuet.ac.bd")) {
       localStorage.setItem("adminloggedIn","true");
       setUserEmail(email);
       setAdminflag(1);
