@@ -15,7 +15,7 @@ const Register = () => {
         alert("Fill all the fields");
         return ;
       }
-      await axios.post("http://localhost:8000/signup", {
+      await axios.post("https://cafeteria-tsc-9lik.onrender.com/signup", {
         email, password
       })
         .then(res => {

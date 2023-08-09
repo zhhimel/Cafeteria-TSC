@@ -39,7 +39,7 @@ const Admin = () => {
             formData.append('description1', description1);
             formData.append('tag1', tag1);
             console.log(formData);
-            await axios.post("http://localhost:8000/controlFoods", formData)
+            await axios.post("https://cafeteria-tsc-9lik.onrender.com/controlFoods", formData)
                 .then(res => {
                     if (res.data === "exist") {
                         alert("Food Already exists!");
@@ -81,7 +81,7 @@ const Admin = () => {
         formData.append('description', description);
         formData.append('tag', tag);
         try {
-            await axios.put(`http://localhost:8000/controlFoods?id=${id}`, formData)
+            await axios.put(`https://cafeteria-tsc-9lik.onrender.com/controlFoods?id=${id}`, formData)
                 .then(res => {
                     alert("Food item updated successfully!");
                 })
@@ -103,7 +103,7 @@ const Admin = () => {
                 alert("You must provide a id to update or, delete the food.")
                 return;
             }
-            await axios.get(`http://localhost:8000/controlFoods?id=${id}`)
+            await axios.get(`https://cafeteria-tsc-9lik.onrender.com/controlFoods?id=${id}`)
                 .then(res => {
                     if (res.data === "notexist") {
                         alert("There is no food with this ID")
@@ -138,7 +138,7 @@ const Admin = () => {
         const confirm = window.confirm("Are you sure want to delete it?");
         if (confirm) {
             try {
-                await axios.delete(`http://localhost:8000/controlFoods?id=${id}`)
+                await axios.delete(`https://cafeteria-tsc-9lik.onrender.com/controlFoods?id=${id}`)
                     .then(res => {
                         window.confirm("Food item deleted!");
                         setId("");
@@ -164,7 +164,7 @@ const Admin = () => {
     async function showAllUsers() {
         setShowuser(!showuser);
         try {
-            await axios.get("http://localhost:8000/users")
+            await axios.get("https://cafeteria-tsc-9lik.onrender.com/users")
                 .then(res => {
                     setUsers(res.data);
                 })
@@ -179,7 +179,7 @@ const Admin = () => {
         const confirm = window.confirm("Are you sure want to delete this user?")
         if (confirm) {
             try {
-                await axios.delete(`http://localhost:8000/users?id=${user_id}`)
+                await axios.delete(`https://cafeteria-tsc-9lik.onrender.com/users?id=${user_id}`)
                     .then(res => {
                         showAllUsers();
                     })
@@ -199,7 +199,7 @@ const Admin = () => {
     async function showAllOrder() {
         setShowOrders(!showOrders)
         try {
-            await axios.get("http://localhost:8000/orderdetails")
+            await axios.get("https://cafeteria-tsc-9lik.onrender.com/orderdetails")
                 .then(res => {
                     setOrders(res.data);
                 })

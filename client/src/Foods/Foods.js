@@ -29,7 +29,7 @@ const Foods = () => {
     // }
     async function getAllfoods() {
         try {
-            await axios.get("http://localhost:8000/foods")
+            await axios.get("https://cafeteria-tsc-9lik.onrender.com/foods")
                 .then(res => {
                     setFetchedfoods(res.data);
                 })

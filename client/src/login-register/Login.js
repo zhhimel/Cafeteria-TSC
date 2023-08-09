@@ -41,7 +41,7 @@ const Login = () => {
         alert("Fill all the fields");
         return ;
       }
-      await axios.post("http://localhost:8000/login", {
+      await axios.post("https://cafeteria-tsc-9lik.onrender.com/login", {
         email, password
       })
         .then(res => {

@@ -28,7 +28,7 @@ const Cart = () => {
         setShow(false);
         return;
       }
-      await axios.post("http://localhost:8000/orderdetails", {
+      await axios.post("https://cafeteria-tsc-9lik.onrender.com/orderdetails", {
         userEmail,phone,totalprice,address
       })
         .then(res => {
