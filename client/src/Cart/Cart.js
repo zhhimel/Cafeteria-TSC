@@ -85,7 +85,7 @@ const Cart = () => {
                 <label>Phone: <input className='ms-3' type='text' value={phone} onChange={(e)=>{setPhone(e.target.value)}}></input></label>
               </div>
               <div className='mt-2'>
-                <label>Address:<input className='ms-2' type='text' value="Must be in CUET" onChange={(e)=>{setAddress(e.target.value)}}></input></label>
+                <label>Address:<input className='ms-2' type='text' placeholder="Must be in CUET "  onChange={(e)=>{setAddress(e.target.value)}}></input></label>
               </div>
             </form>
             <div className='mt-2'>
