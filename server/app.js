@@ -5,7 +5,11 @@ const routes=require("./router/user.route");
 require("./config/db");
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
-app.use(cors());
+app.use(cors({
+    origin:["https://deploy.mern-lwhq.vercel.app"],
+    methods:["POST","GET"],
+    credentials: true 
+}));
 app.use("/",routes);
 app.use((req,res,next)=>{
     console.log("Route not found")
